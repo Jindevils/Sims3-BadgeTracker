@@ -4,6 +4,17 @@
 
 Badge Tracker adds an achievement panel to The Sims 3 Steam 1.67 on Windows. Load a household and press **Ctrl + Shift + B** to open it.
 
+## Download and installation
+
+[Download BadgeTracker-Teste.zip](https://github.com/Jindevils/Sims3-BadgeTracker/releases/download/v0.1.0-test/BadgeTracker-Teste.zip)
+
+1. Close the game and extract the ZIP.
+2. Copy BadgeTracker.asi to The Sims 3's Game/Bin folder, next to TS3W.exe. A 32-bit ASI loader is required.
+3. Copy BadgeTracker.package to Documents/Electronic Arts/The Sims 3/Mods/Packages.
+4. Load a household and press Ctrl + Shift + B.
+
+The ZIP includes English and Brazilian Portuguese installation guides.
+
 ## Features
 
 - **Browse and filter.** Search by name or filter by installed pack, medal tier, or completion status. Cards show the description and original badge artwork when available.
