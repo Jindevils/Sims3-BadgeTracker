@@ -1,0 +1,1090 @@
+{
+  "mapped": {
+    "cc51b4c0-e075-476e-828c-9d2c47228218": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/ganhador_do_premio.png"
+    },
+    "15441a83-6922-4350-aa78-8dbefc31ca19": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/adorador_do_sol.png"
+    },
+    "eb0679cd-05fc-4c7d-b9c1-1eaca69c8e04": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/beijoqueiro.png"
+    },
+    "f83a13be-65f9-44ce-aef3-b599f9dad91b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/a_linguagem_do_amor.png"
+    },
+    "115cad7a-7687-45a2-b2bf-17f2d9d0adea": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/escultor_fantasmagorico.png"
+    },
+    "2a5bcc1d-dbc6-4869-8dc6-2da62f6ad8fa": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/terceiros_quartos.png"
+    },
+    "1caee35c-48d8-4ad2-bea0-653db121f90f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/poder_floral.png"
+    },
+    "021c9d4e-c249-42ba-93e8-2b4bba660dd7": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/carpado.png"
+    },
+    "cee3f319-13ff-4ccb-a729-393a58b315ec": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/pele_exposta.png"
+    },
+    "30dad2ac-f6c4-479b-ba23-ac9ecafe090b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/cabum.png"
+    },
+    "eb98cbbf-abec-4b87-ac9b-8b2f5f89ccf5": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/construtor_experiente.png"
+    },
+    "36bfa574-d9a8-4efe-a744-28b9726c1371": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/bronzeado.png"
+    },
+    "fd0281d6-6821-45fa-bb7a-a7e2aeb45483": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/escultor_de_neve.png"
+    },
+    "446e2448-cba4-450e-ad8e-596387d85ac7": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/peripecias_do_dia_assustador.png"
+    },
+    "9676fa0d-ee66-43de-8dbc-9497e92bd895": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/diversao_da_feira.png"
+    },
+    "536a51d5-e288-4ae4-9bf1-535aa4016e94": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/colecionador_ovotimo.png"
+    },
+    "4f7d65f4-e92e-41c4-9a6d-c7860b17b42d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/preguicoso.png"
+    },
+    "0dd5573d-ea10-44a1-9507-78e73b30a98b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/feliz_fim_de_ano.png"
+    },
+    "ab015943-73f7-4bc6-87c2-54c655be9f93": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/gostosuras_ou_travessuras.png"
+    },
+    "4827b85d-ed57-415a-884d-28bce2af673f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/clima_de_inverno.png"
+    },
+    "a00be5b6-ef9b-43e5-b729-da7392e4dce9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/barriga_sem_fundo.png"
+    },
+    "ed680e3c-3dfe-43b3-add8-32f972c54348": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/amor_dedicacao.png"
+    },
+    "5e1be02b-6c4f-4c5c-99f4-3cd849f6bd21": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/bom_braco.png"
+    },
+    "ba8e41a5-371f-4e9c-ae4c-1b54624259ea": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/campeao_da_feira.png"
+    },
+    "bc320c01-d3fb-4459-a4a1-ad5eea46db7c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/fanatico_por_feira.png"
+    },
+    "fd094dbe-df7e-4bcb-9840-91aecefe3c6c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/oba_oba_sazonal.png"
+    },
+    "dbee22a6-cd50-4686-b9f5-949ee587cb8b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/o_melhor_sim_na_danca.png"
+    },
+    "b25c6eae-b422-4bde-a582-7936297fe656": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/planejamento_festivo.png"
+    },
+    "0b8f8587-09ad-48bf-a50a-b58ad5fbc9a6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/clima_adverso.png"
+    },
+    "ad16aa9c-8fb5-4a2f-8fff-933882490b11": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/especialista_tecnico_alienigena.png"
+    },
+    "d6f2ce5f-3392-4d6b-b953-748495a2ceeb": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/brincar_com_a_natureza.png"
+    },
+    "a43d9cb7-0739-4218-8ef5-109fdc4b5320": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/amantes_malfadados.png"
+    },
+    "c4923ec3-b576-45f3-9158-f2a24f41c7d2": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/seasons/um_gnomo_para_todas_as_estacoes.png"
+    },
+    "3c130a20-44f8-433b-b884-a4707e900ca1": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/canelado.png"
+    },
+    "6abea0ad-85d0-41c4-9acd-099e22cf4fef": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/sms_de_separacao.png"
+    },
+    "cba5fa73-f630-440c-beef-e20d9a0f46d6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/picante.png"
+    },
+    "01428ff0-ec18-4acc-91e4-2e5af12f0892": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/provas_a_venda.png"
+    },
+    "755a37c3-4409-42b4-8703-ea9b379aa470": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/destino_final.png"
+    },
+    "37b71b82-b1b6-45cd-8a6e-bfb8dd7de204": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/barris_e_pixels.png"
+    },
+    "973e51aa-7d75-43e3-a4fb-658d63f97bc7": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/conectado.png"
+    },
+    "c152a693-bc21-4cb4-81ab-0ce766b6bf40": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/seguindo_os_numeros.png"
+    },
+    "15eb1874-e217-4a2b-a1b6-c9fe4d27f848": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/remedio_de_ervas.png"
+    },
+    "6ff82ca5-eca8-43a4-82d5-03f764e9ef34": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/ervas_e_graos.png"
+    },
+    "e2639526-8008-48fe-841e-f6d356421a0b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/como_vieram_ao_mundo.png"
+    },
+    "cb94cff1-44ce-4806-ae4a-1ed7a87f606f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/amor_a_primeira_vista.png"
+    },
+    "cd1c07ee-02e2-4e7a-aaf8-7c94912e6e44": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/relacionamentos_novos.png"
+    },
+    "d55c8273-04c4-42d1-91e4-fb182cfc13df": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/barista_profissional.png"
+    },
+    "f30ae2a4-3917-4ab5-a2be-b1554de0d088": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/economizando_para_os_estudos.png"
+    },
+    "edbc3445-79f1-4a65-9d6b-c2c42dcfacdd": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/escaneador.png"
+    },
+    "d7ae5be5-e260-46d0-937a-02f5a45db47c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/que_radical.png"
+    },
+    "3defa64d-6000-4450-9ebd-017dca37f9ad": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/gafes_abundantes.png"
+    },
+    "40b82c36-f4f1-40b4-9a98-7c63c52e22a0": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/ja_era.png"
+    },
+    "feeb5c4b-c29c-41d4-89fd-3b10745f8e53": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/tao_irresistivel_que_doi.png"
+    },
+    "f21b0559-9b85-475c-94bb-078068f1b4e9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/marcando.png"
+    },
+    "c0c35d05-ece1-4cd0-b666-a08f39dd6c38": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/nosso_espirito_e_forte.png"
+    },
+    "80edfe12-9a79-4439-9fd6-60565c3e6cad": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/10_por_100.png"
+    },
+    "eae0b630-8d1d-4222-80d0-a9490de30cac": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/conexao_digital.png"
+    },
+    "8e4aaf62-79ba-478e-8907-169147ffe838": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/malhando_bem.png"
+    },
+    "fef2981e-2def-4fca-ab05-b1885317cb99": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/alta_tecnologia.png"
+    },
+    "db62f2a5-18a5-4d65-9f9a-56834a75f28b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/cientifico.png"
+    },
+    "6bb14862-c705-46cf-b35a-afbe7700db9e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/artista_refinado.png"
+    },
+    "0846a29d-d77a-445b-83a8-f6477472bcc3": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/beijos_de_longa_distancia.png"
+    },
+    "f5822643-fedb-45fe-914d-cacd4f8dbfd2": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/lingua_de_prata.png"
+    },
+    "6c9dece2-1ca5-42fd-ab48-584c8ac8f5a0": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/apresentacao_planejada.png"
+    },
+    "32093a39-07e3-4c07-8bed-32ed3642aa7f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/fotos_romanticas.png"
+    },
+    "8b02983b-469c-44ee-8358-ef561193bace": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/tentando_se_encaixar.png"
+    },
+    "2b4d065e-d059-41a1-8757-da8fcc503eb9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/no_calor_do_momento.png"
+    },
+    "e9b8b9af-fa5f-44bc-91c2-93ca0edfbed5": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/novo_e_brilhante.png"
+    },
+    "abd91f61-101e-46ce-976b-e6a52dec558c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/estudioso_excelente.png"
+    },
+    "3a49a75c-f585-4b7c-96f7-7453bdb5492d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/liberando_o_potencial_do_sim.png"
+    },
+    "33762637-fa37-4295-9430-b5418252f6c8": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/artista_de_rua.png"
+    },
+    "129f69e9-eb63-4e6c-bc10-33f813846899": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/negocios_de_nivel_superior.png"
+    },
+    "1a0d2b79-d771-4e23-a0bd-27113557909b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/campeao_das_pistas.png"
+    },
+    "3478ba6d-bb1d-443d-888a-1fec3904219c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/desafios_variados.png"
+    },
+    "8f17e808-02a4-4c1e-bda8-9be040336454": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/dificil_de_agradar.png"
+    },
+    "e0da7240-6066-484e-94e0-927002c005ca": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/convencoes_de_videogame_ja_sao_convencionais.png"
+    },
+    "a2c06856-09f1-4f34-a007-ce05136de6c8": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/o_que_penso_dos_seus_pensamentos.png"
+    },
+    "acb2bdec-2018-46cb-b657-79db769dadaf": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/beijos_romanticos.png"
+    },
+    "12f60d9d-1edf-40f6-9bc4-57c35bf2448d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/sol_e_agua.png"
+    },
+    "c3dd32d8-0bc1-43f9-82d1-c45268a63020": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/potencial_positivo.png"
+    },
+    "a25a0d83-fc29-4ace-a31c-f4f1845237ae": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/se_voce_quer_revolucao.png"
+    },
+    "b243bc48-c991-4801-bf13-30d5f7b2c4dd": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/oba_oba_ervas_e_violao.png"
+    },
+    "6b6939d7-38a9-4210-89c6-a292b0897f62": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/destreza_movel.png"
+    },
+    "76c3f183-897d-47bb-b447-893885ea03e0": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/tudo_fica_melhor_com_ervas.png"
+    },
+    "2d98a501-ee6f-4471-af74-f06345a1f438": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/mestre_dos_diplomas.png"
+    },
+    "58efe056-1dad-4447-aaf9-d23bceba3248": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/mandem_os_clones.png"
+    },
+    "5410b251-b75a-4b4c-8ce9-bf6af190e883": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/estudante_profissional.png"
+    },
+    "2430f969-ce2c-49f5-a90b-e2d03f592d75": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/university/10_000_simoleons.png"
+    },
+    "23b5badc-07d1-4585-a0ef-ac6a9d66f052": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/curiosidade_espacosa.png"
+    },
+    "877d980d-64a2-4800-b6ec-ebc6e8db70bc": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/esfera_sabe_tudo.png"
+    },
+    "7884876b-7f2d-47f2-8118-0fd9858f9640": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/fas_de_glitter.png"
+    },
+    "8cd6364d-3919-4973-b33f-7aa4159c9a76": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/fa_de_metal.png"
+    },
+    "fb8cd215-c3b9-4501-abc7-0bba0be470d0": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/e_seu_pequeno_gnomo_tambem.png"
+    },
+    "4c96de4d-dd4b-4498-bb91-dc2f84fab4a2": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/insetos_chatos.png"
+    },
+    "0f089665-ec56-4785-b8e0-1e580ce1ab4f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/investigador_de_signos.png"
+    },
+    "b09e38fd-26e8-4779-83b0-0259c8d2baf7": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/onde_os_lobos_passam_o_tempo.png"
+    },
+    "dffe68e4-2cbc-45da-a6d3-321e06a19319": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/onde_os_opostos_se_atraem.png"
+    },
+    "56893884-22c0-468e-9c19-2f473be9f948": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/pacote_participativo.png"
+    },
+    "72cd2ff2-bc80-46fe-8753-573a1304ea4c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/num_passe_de_magica.png"
+    },
+    "b2420b41-2724-4242-945d-65630bff1fec": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/poesia_encerada.png"
+    },
+    "a872ea22-f26c-4e2f-a533-9ed28321b80e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/possibilidades_poderosas.png"
+    },
+    "e1c8383e-5e01-4a1d-8b4e-6436e8bce935": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/preciosas.png"
+    },
+    "3e3e3fe0-8395-4fd0-be4b-f70cf653168f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/roqueiro.png"
+    },
+    "ac28eb32-0058-458c-8834-91cb305cbdc8": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/salvando_a_si.png"
+    },
+    "a7c6d209-9e82-4943-93c4-77e7a88f4a3b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/semeando.png"
+    },
+    "7bec8f73-729a-4310-9238-56ebad6df0f9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/inimigos_desnaturais.png"
+    },
+    "a7a072d5-4aef-47e8-80fe-0644214a9a1d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/1_garota_15_companheiros_fada.png"
+    },
+    "f9e2b1fb-a245-4ed9-93a7-9f48f0be7a92": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/1_garoto_15_companheiras_magicas.png"
+    },
+    "4adcc914-14e7-4d0c-bd5f-aa7faf6230ed": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/boa_acao.png"
+    },
+    "f3fd7abd-8567-4b36-9163-3ff2dd8ec698": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/carnivoro.png"
+    },
+    "2491d648-b921-42e0-a7a1-2abc603e76e8": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/a_festa_na_casa_da_fada.png"
+    },
+    "55b074ee-49e7-46d2-b51f-c600173c64fa": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/eu_nao_acredito_em_fadas.png"
+    },
+    "3cdbe109-2b90-4b4c-beb0-cf97aa195246": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/fale_com_a_palma.png"
+    },
+    "895a3368-e444-4623-9e5a-14f6fb81d129": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/maestria_mistica.png"
+    },
+    "3a9a2254-3aa5-4063-b72b-6e86592c0400": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/muito_curioso.png"
+    },
+    "29676eb9-ae89-48f3-97b4-e2d53caed6c3": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/o_segredo_esta_no_pulso.png"
+    },
+    "7ddb58c3-1ac1-42ea-afbb-da876a01eaf9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/pacto.png"
+    },
+    "dda0a4da-901a-458b-ab3e-48296d191def": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/pegando_geral.png"
+    },
+    "f82d8d4b-1f6d-4df7-b3a8-99ef5de8b01d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/sensitivo_celebrado.png"
+    },
+    "51ba1d33-23ba-4f6d-97eb-87821268cb6e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/taumaturgo.png"
+    },
+    "1fda0c03-5d55-4d69-b16f-926a57113ad6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/total_de_transformacoes_em_sapos.png"
+    },
+    "0e8adc01-b39c-48df-965e-46715e765186": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/mestre_da_seducao.png"
+    },
+    "63456137-bef7-46ca-b41f-eb13fdad5d8f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/progenitor_do_grupo.png"
+    },
+    "8c134167-9434-46db-8223-996697f21fd5": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/bajulador_psiquico.png"
+    },
+    "1f0678aa-bfb3-4e40-948e-801384bdfefd": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/encantador_fadanado.png"
+    },
+    "9ebe9c37-f373-4560-973c-d780d1f4ff51": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/fundi_muito.png"
+    },
+    "a45960d3-15d1-459e-abf1-9d1b9a0789b7": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/grato_por_presentear.png"
+    },
+    "040299ad-982d-4ce2-bcc3-43dad21bbd9c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/estilo_swan.png"
+    },
+    "26b5094d-ab71-4285-8667-bfb4853340f7": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/maratona_de_truques.png"
+    },
+    "1ceff077-8b44-4ea4-8ad5-00e3d320f404": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/supernatural/uma_realizacao_alquimica_maravilhosa.png"
+    },
+    "716151a1-fdba-4e0b-8c14-a642c06139db": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/puro_luxo.png"
+    },
+    "7b02fcbb-e91d-491f-8673-7948d788ef93": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/agora_a_gente_vive_em_barcos.png"
+    },
+    "439d4229-2a8a-485e-b623-7d4ec6953bf1": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/unico_sobrevivente.png"
+    },
+    "48857179-90da-4a6c-8788-19185f8fceca": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/cruzeiro_festeiro.png"
+    },
+    "9f4cbc66-3e0f-4d19-a547-53b97d3137a9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/nunca_mais.png"
+    },
+    "ce82f9b1-6092-4db5-9d6e-5c2b85e6c87c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/o_mundo_e_uma_concha.png"
+    },
+    "75be7645-2f0b-42b6-8d16-35a2bdea9bce": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/cacador_de_tesouros.png"
+    },
+    "b57538b5-dda8-4da5-b199-6238c0d06a13": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/quem_manda_isso.png"
+    },
+    "608f83b0-7430-43eb-b56a-2d6f0b1d2d69": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/marca_dos_tubaroes.png"
+    },
+    "d0b3d1e1-f7fc-4bb1-b552-e3bd1b77d610": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/explorador_nato.png"
+    },
+    "5090d8df-eb63-4103-842f-979f93d81690": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/hotel_de_alta_classe.png"
+    },
+    "4cddfe34-033c-4c5d-93fd-b4f9789413ff": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/island/muitos_peixes_no_mar.png"
+    },
+    "cf04c8c2-8269-4e00-a0bd-b519671f247c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/tao_dificil_quanto_parece.png"
+    },
+    "d68f7767-1597-4c3f-98f1-cbb63b9fe9f9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/chance_minima.png"
+    },
+    "d08ada1b-617c-4df3-bb72-50aaafe573c5": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/olhe_o_que_eu_consigo_fazer.png"
+    },
+    "01a76d79-0dd7-4d25-8f13-3d1779f22ed9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/perto_demais_do_perigo.png"
+    },
+    "0ae47db9-b4c6-4614-b651-ca971c0eec75": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/uma_semana_sobre_mim.png"
+    },
+    "86360b6f-a406-4eaf-b427-889a403056a0": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/tacada_de_ferro.png"
+    },
+    "0dcf772b-81e5-4df1-98e2-0745c4f3b8bf": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/servidor_constante.png"
+    },
+    "0ea9d963-4b37-43d1-85e1-c45553c45b03": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/dois_contra_dois.png"
+    },
+    "22a3e6be-1512-43f0-ad2c-5d2214e815a4": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/vencedor_no_parque.png"
+    },
+    "0560c7b2-f9d0-418a-8060-4ab6a39010c9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/em_direcao_a_luz.png"
+    },
+    "c4d6300a-8049-4abd-8085-0898db8cad7e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/genio_fora_da_garrafa.png"
+    },
+    "a1ad30e1-7a67-4815-81b3-ac22f2612f93": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/queda_chocante.png"
+    },
+    "b0f9d825-bfbf-4875-9cf8-0f3d8954894f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/fotos_bobas.png"
+    },
+    "b4c5b5a8-7063-49c6-afbe-d0b474cc8a31": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/dupla_dinamica.png"
+    },
+    "ceffdda4-8ebf-448b-82d3-b29b4a04075c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/ta_da.png"
+    },
+    "ecef8168-6845-42ab-8bb5-b065e5eb2ef6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/maldade_cantante.png"
+    },
+    "e3728410-c9a1-4a71-b5ea-4db55acec250": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/showtime/acromaniaco.png"
+    },
+    "84add4c6-6a8e-4aa3-822c-81506c41c17b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/a_new_vice.png"
+    },
+    "4ab67c47-0064-447f-892c-c1beab4c9b30": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/abracadabra.png"
+    },
+    "e6550b5e-ea5a-4072-aa78-f3719f74f08f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/achieving_grapeness.png"
+    },
+    "9a75f8ee-3ee5-48e6-b8cf-232b5e79893a": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/acrobat_around.png"
+    },
+    "137c4c06-8e8a-4092-8d5b-08eb11d465f6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/all_about_town.png"
+    },
+    "ea1cb747-3b9e-4708-ae8c-6697d4aed84b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/all_the_parks_a_stage.png"
+    },
+    "0bfb4b6b-a1e2-43d3-a4ed-5d342ed67d53": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/best_in_bistro.png"
+    },
+    "a1783ba0-f806-490f-b32c-01efb39ae082": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/big_meany.png"
+    },
+    "28725942-47f8-49a0-98d3-c7d4ecc2e53b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/blown_away.png"
+    },
+    "6b83214f-5a5b-4961-893b-24a872ccb6b4": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/bon_appetit.png"
+    },
+    "818098aa-b5c4-44ac-9d45-be7160e62a51": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/book_it.png"
+    },
+    "6ba243dd-36c7-4df8-9676-18292a5d0705": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/brawler.png"
+    },
+    "dcd1586f-eaea-40b4-94b4-0fdf2d6eb03d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/bucketful_of_nuts_and_bolts.png"
+    },
+    "511cfe48-e392-4be6-b0f1-156f488844e9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/burnout.png"
+    },
+    "5429098d-8bba-4341-a086-dc8d5c729e10": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/buzzed.png"
+    },
+    "f5f61ed1-407f-4c96-90cb-30fd575e6ec5": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/center_of_attention.png"
+    },
+    "c9147733-04ca-499d-a7b8-f60b93f7f5b9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/communicator.png"
+    },
+    "dd2623b0-8a76-44ef-a8cc-670e655d0e9c": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/cross_my_heart_hope_to_die.png"
+    },
+    "2e912f87-10e5-4074-8b81-c887450fcc36": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/cutter_mccuttington.png"
+    },
+    "a6ec4586-cef1-43b9-9e60-e4da1ac8659e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/delivery_please.png"
+    },
+    "575b2b8b-13e7-4b19-ba12-04980b6fac83": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/desperate_diva.png"
+    },
+    "ba4c66a0-107a-4ff7-9b39-5823dc39184d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/discount_dj.png"
+    },
+    "f826d2ba-fbe2-4586-8637-69874a56e784": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/double_magic_legend.png"
+    },
+    "e4aaf068-6958-455b-ba74-0dd0c5ec06f6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/enchanting.png"
+    },
+    "df4b56c1-3dfd-48ef-b77d-d89c8eefb31f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/enemy_of_the_people.png"
+    },
+    "9dc87932-d39f-4737-8a5e-fb6ea730b344": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/evil_sweets.png"
+    },
+    "de02690e-4eb9-41d3-a08b-c2c1ad4ef57d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/exercise_in_fertility.png"
+    },
+    "a429005b-e36e-4ab8-a65e-f8750141c5b1": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/fit_as_a_fiddle.png"
+    },
+    "1b0457fe-2fcd-48f9-9702-9128e0d733d5": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/foot_in_the_door.png"
+    },
+    "235a932f-5dc5-402e-b0c0-a26df0f1d5c1": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/friends_in_high_places.png"
+    },
+    "dad3129f-5ff2-43ca-8da9-ed9b71e7c6d4": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/fruitful_efforts.png"
+    },
+    "06757102-b44f-481f-bd27-e30d44bae9fb": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/get_physical.png"
+    },
+    "681ece31-bede-4c1c-ad36-9e9d0dad301e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/going_for_the_gold.png"
+    },
+    "7a040462-3ab9-497d-990a-70f021a741bd": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/going_the_distance.png"
+    },
+    "c84ecc02-cdf5-4d91-a2ed-5ccfb67f7e18": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/guilty_conscience.png"
+    },
+    "19bf64a4-6d83-4576-b41a-ce78f23e5c35": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/head_of_the_family.png"
+    },
+    "fe7a413e-d9b9-4f39-9ac2-209348e6c142": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/heavenly_warmth.png"
+    },
+    "036d46b9-9065-44c2-afe9-a199d5745b62": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/help.png"
+    },
+    "34848b1f-0c5f-42e6-8a37-03b48d4baabc": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/heres_the_dish.png"
+    },
+    "bd2e3123-0780-4a1c-97bc-9146bd591d18": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/hermit_crab.png"
+    },
+    "2efc9075-818a-46f8-98be-c58bd9636417": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/intellectual_pursuits.png"
+    },
+    "7a3199d9-355b-4341-ac52-cccbf89c3ea6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/is_that_real.png"
+    },
+    "f3c1d250-0e2b-4a07-9999-43831fb2e714": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/kid_party_stuff.png"
+    },
+    "e69c892f-43b2-48e9-b4b3-fa19009321db": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/legendary_performer.png"
+    },
+    "01cd8b00-5958-4f45-a668-a652294ea991": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/librophile.png"
+    },
+    "bb151c5e-71c4-41c9-8f80-c5d5d9150f27": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/loved_and_lost.png"
+    },
+    "2e44588a-cefc-4099-bf32-43e994c33516": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/magic_and_mystery.png"
+    },
+    "e7c4c679-4be7-4cb4-ae29-c62bf2ad24e8": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/master_astronomer.png"
+    },
+    "ea009974-5971-48f2-a282-4eea1a83076e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/master_chef.png"
+    },
+    "1982eda6-ba23-4c40-bf48-43815d240189": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/master_hacker.png"
+    },
+    "9c2cad35-b906-4687-a802-6fd7d760fc9b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/master_of_illusion.png"
+    },
+    "4635ae55-bee5-46b6-ba5c-c1cbb9c375f7": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/master_of_the_corporate_destiny.png"
+    },
+    "15475f5b-2e2f-4c9a-8124-8c96848826c3": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/master_of_the_musical_destiny.png"
+    },
+    "7edb777c-6115-4f96-aae2-102729d4d38a": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/master_of_the_rockin_destiny.png"
+    },
+    "86e56ce5-c4dc-47e3-85e1-7d11b2f0abf1": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/master_of_the_literary_arts.png"
+    },
+    "74760722-341b-49fe-9d8f-a8787040493b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/me_myself_and_i.png"
+    },
+    "903d7b07-91aa-4914-88fc-688f6c73464f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/mischievous_tokens_of_divinity.png"
+    },
+    "6abdcc89-4bfd-4742-887c-e10924a4aa5b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/oh_oh_domino.png"
+    },
+    "9602d56a-e659-4df2-a015-1881aa6f1273": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/on_the_ball.png"
+    },
+    "35454ad2-391b-4a33-8d63-c3ab9237c0ab": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/pastry_perfect.png"
+    },
+    "e26aa877-56b8-40ba-a24b-0f32345c6b46": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/picture_a_kiss.png"
+    },
+    "00715cb7-3e8a-4935-9fa9-9792e1cbd199": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/pool_performer.png"
+    },
+    "efd4eb52-c639-4c4a-96fa-9df43bbcd35f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/precocious_pollination.png"
+    },
+    "b71cfd21-58e0-4a7e-a617-ee9b4c6ac5b6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/profitable_botany.png"
+    },
+    "acde893c-7b48-479c-aa07-d0a88dd0a290": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/profoundly_perfect_dishes.png"
+    },
+    "3eb152f6-a7ba-4e7d-825a-112cb419bd20": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/pump_it_up.png"
+    },
+    "4f5821d3-8380-4563-9eb0-196079cf26a5": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/rest_and_relaxation.png"
+    },
+    "197a975e-934d-4a17-a8ff-93f41f145f58": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/rising_star.png"
+    },
+    "16ff1492-8817-4772-bb2f-a34416092e0f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/salt_water_fish_monger.png"
+    },
+    "11d8a84d-0d07-4b0b-afb9-66600be0316d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/serenity_now.png"
+    },
+    "312336f2-9daf-42b8-a51d-5ec4738917d9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/sing_it_again_sim.png"
+    },
+    "4dc20d38-4125-44e4-9e4a-886c76767525": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/sleeping_with_the_fishes.png"
+    },
+    "7004ddc1-d814-4376-83fc-d831ee31d085": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/someones_gotta_do_it.png"
+    },
+    "fdb623e1-3bfd-4248-96e8-9dbd2480c1cb": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/something_to_write_about.png"
+    },
+    "39544466-c029-446d-ab68-5b2fe83c79d1": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/spellslinger.png"
+    },
+    "6cceedc0-abea-44a7-a8da-181fabb48f2d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/spring_training.png"
+    },
+    "e1e9535f-d60c-4f66-8fd7-e4551fab9282": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/stage_magic.png"
+    },
+    "b8d9ca5a-f330-47d9-8289-9f5122db17a0": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/steadiest_of_all_hands.png"
+    },
+    "b8bf1515-afb6-4be8-be56-2df924573323": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/steal_with_style.png"
+    },
+    "1e79f75b-b307-4691-b2e1-fee8e6a4914e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/store_run.png"
+    },
+    "2181cf63-2933-4710-9ec6-bf7cf4f3780b": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/strange_joy.png"
+    },
+    "868fc336-ef86-438d-8f81-9740a90e608f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/sturgeon_surgeon.png"
+    },
+    "1fddff1a-8a5b-4610-a3ec-ea9b24f8f57d": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/supporter_of_the_arts.png"
+    },
+    "024b9325-03f4-4b7b-a4b4-745eecf0abcc": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/terrorizer.png"
+    },
+    "68f71cab-a6b4-4b43-8e66-a09e75d4351a": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/the_bright_side.png"
+    },
+    "88d4390d-a8d7-4a6f-805d-4604811a2638": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/the_magic_of_money.png"
+    },
+    "70f37a32-abb4-405a-a45e-32d44d343f0f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/the_perfect_chef.png"
+    },
+    "47e01961-bc16-447a-bc1b-f58e42fcac94": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/the_show_must_go_on.png"
+    },
+    "7210f1fd-3089-4e25-a805-8089b1ee1e73": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/the_soundtrack_of_your_lifetime.png"
+    },
+    "c9a8d378-b509-444f-b850-2c431ed0cd64": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/the_town_tutor.png"
+    },
+    "2298931f-ceb2-43c8-b995-18de1311d3d9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/til_death_do_we_part.png"
+    },
+    "95bf58b7-3587-4bc5-9908-1b7f870e6e82": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/too_busy_to_clean.png"
+    },
+    "588d4086-8615-44f8-be8f-b970fc0095ec": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/try_the_goods.png"
+    },
+    "c66fec19-122b-4302-b2c5-a3bae969d9c5": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/vanishing_act.png"
+    },
+    "3ed19d9a-923f-40d5-8dcb-3268718e2bc9": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/weed_em_and_reap.png"
+    },
+    "b960f2e2-e3c8-4615-bd20-17e57bf95a5f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/winning_streak.png"
+    },
+    "ce626776-bcbd-4286-b9d8-9e54db08dfc6": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/works_hard_for_the_money.png"
+    },
+    "e7e116b3-7b09-4e57-827e-aaabd37b5bf4": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/your_mama_the_llama.png"
+    },
+    "a4194348-3282-4db7-8b07-171073aa635e": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/your_own_biggest_fan.png"
+    },
+    "3d216cb3-f5bd-4f7f-ab00-e18ec276dc8f": {
+      "source": "BadgeTracker",
+      "file": "badge_assets/simsvip/your_right_to_party.png"
+    }
+  },
+  "missing": [
+    {
+      "guid": "5097b5c0-86d6-46ba-b5cc-18fba46d3087",
+      "name": "Moving on Up"
+    },
+    {
+      "guid": "5e1d8d0b-a04e-4d22-b824-2d924d41d359",
+      "name": "What's Cookin'?"
+    },
+    {
+      "guid": "fa8b090c-3393-4010-952d-c2b872d9ec44",
+      "name": "Crime Never Pays"
+    },
+    {
+      "guid": "54321f93-c99d-4316-b95c-ed68f16303a3",
+      "name": "All Things Great and Small"
+    },
+    {
+      "guid": "c4fc5a4f-b38d-4346-9d2f-c5c797ffaae0",
+      "name": "Take a Break from those Monsters"
+    },
+    {
+      "guid": "e05a271b-9d66-49d2-b261-d8e3bfddb515",
+      "name": "The Odd Bunch"
+    },
+    {
+      "guid": "da09ed4b-5249-43af-8a54-b62cce23e238",
+      "name": "Moonlight Novelist"
+    },
+    {
+      "guid": "793a727f-a90e-4a59-9010-4369ae6ce100",
+      "name": "Live Show Venue Trophies"
+    },
+    {
+      "guid": "0a550f10-abd5-4d08-93b5-16df128fa34c",
+      "name": "You've Been Told"
+    },
+    {
+      "guid": "8b788b9d-ce0f-4208-9a34-d791e85d9313",
+      "name": "Opportunist"
+    },
+    {
+      "guid": "2309e5d6-9d40-4612-a340-93ba4cfee30c",
+      "name": "5 for 5"
+    },
+    {
+      "guid": "e9e5dee6-0cab-452b-9521-7419d31be709",
+      "name": "A Novel Way to Play"
+    }
+  ]
+}
