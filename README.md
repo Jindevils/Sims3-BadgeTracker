@@ -1,5 +1,7 @@
 # Badge Tracker for The Sims 3
 
+![Badge Tracker for The Sims 3](screenshots/BadgeTracker-Cover.png)
+
 An achievement tracker for The Sims 3 Steam 1.67 on Windows. Press Ctrl+Shift+B during gameplay. The managed script reads achievement data, the ASI handles the shortcut, and the embedded viewer displays the catalog and notifications.
 
 ## Screenshots
