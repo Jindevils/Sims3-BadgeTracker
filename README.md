@@ -1,6 +1,6 @@
 # Badge Tracker for The Sims 3
 
-![Badge Tracker for The Sims 3](screenshots/BadgeTracker-Cover.png)
+![Badge Tracker for The Sims 3](screenshots/BadgeTracker-Cover-v0.2.0.png)
 
 Badge Tracker adds an achievement panel to The Sims 3 Steam 1.67 on Windows. Load a household and press **Ctrl + Shift + B** to open it.
 
