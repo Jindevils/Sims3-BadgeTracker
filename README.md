@@ -1,8 +1,20 @@
-# Badge Tracker for The Sims 3
+# Badge Tracker: Rediscover The Sims 3’s achievement badges
 
 ![Badge Tracker for The Sims 3](screenshots/BadgeTracker-Cover-v0.2.0.png)
 
-Badge Tracker adds an achievement panel to The Sims 3 Steam 1.67 on Windows. Load a household and press **Ctrl + Shift + B** to open it.
+A lot of players don’t know this, but The Sims 3 has a whole achievement system. Its badges give you new reasons to revisit an old save, try a different playstyle, or explore an expansion you haven’t played much. The built-in badge browser requires you to sign into EA in-game, and playing online can sometimes make the game feel sluggish.
+
+**Badge Tracker** brings the badge catalog from the official TheSims3.com website directly into your game. Browse the original badges, pick a challenge, and pin it on screen while you play. The catalog is available offline, and you can use the same panel if you prefer to stay signed into EA.
+
+Press **Ctrl + Shift + B** during gameplay to open the panel.
+
+## Features
+
+- **Find your next challenge.** Search by name or filter by expansion pack, rarity, and completion status. The catalog shows badges for the packs your game recognizes.
+- **See how close you are.** View original badge artwork, descriptions, and progress bars where the game provides a readable counter. Sort incomplete badges with a progress bar by highest or lowest progress.
+- **Keep a badge on screen.** Pin a card with its artwork and description, then drag it wherever you want. Right-click the card to return to the full panel.
+- **Celebrate an unlock.** Get a notification and a chime when the game registers an achievement. If its pinned card is visible, the card lights up and plays a shorter chime.
+- **Mark a bugged badge complete.** If you meet the requirements and the game still doesn’t award the badge, use Manual Unlock to mark it complete locally in Badge Tracker. Your EA account and online badges are unaffected.
 
 ## Download and installation
 
@@ -25,12 +37,8 @@ The ZIP includes English and Brazilian Portuguese installation guides.
 
 [Full changelog](CHANGELOG.md)
 
-## Features
+## Saved preferences and languages
 
-- **Browse and filter.** Search by name or filter by installed pack, medal tier, or completion status. Cards show the description and original badge artwork when available.
-- **Track progress.** See the current count, goal, and remaining steps for supported achievements with a readable counter. Progress is refreshed when you reopen the panel. Resume Live Mode after a purchase before checking the count again.
-- **Pin achievements.** Select **Pin**, then **Track pinned badges** to display full cards over the game. Drag the cards with the left mouse button. Right-click a card to return to the main panel.
-- **Get completion alerts.** When the game records a new achievement, the mod displays a notification and plays a chime. If the pinned card is visible, it lights up and plays the shorter chime instead. Use **Sound** to preview both sounds, adjust the volume, or mute them.
 - **Pick up where you left off.** The panel remembers your search, filters, selected tab, and scroll position. It also saves pinned badges and the position of their cards.
 - **Language support.** The panel detects the game's language and offers English and Brazilian Portuguese menus. Other game languages use English menus and achievement text provided by the game when available.
 
