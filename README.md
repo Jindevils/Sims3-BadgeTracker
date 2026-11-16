@@ -54,11 +54,11 @@ Completion status and progress come from the game. If the game has no status for
 
 These screenshots show the actual Badge Tracker interface with sample progress.
 
-![Main panel with search and filters](screenshots/BadgeTracker-01-Painel.png)
+![Main panel with search and filters](screenshots/BadgeTracker-01-Panel-v020.png)
 
-![Pinned achievements and milestone progress](screenshots/BadgeTracker-02-Fixadas.png)
+![Pinned achievements and milestone progress](screenshots/BadgeTracker-02-Pinned-v020.png)
 
-![Compact achievement cards](screenshots/BadgeTracker-03-Cartoes.png)
+![Compact achievement cards](screenshots/BadgeTracker-03-Cards-v020.png)
 
 
 ## Build
