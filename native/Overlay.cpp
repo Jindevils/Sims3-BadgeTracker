@@ -8,6 +8,7 @@
 #include <wrl/client.h>
 #include <algorithm>
 #include <sstream>
+#include <sstream>
 #include <fstream>
 #include <set>
 #include <unordered_map>
@@ -107,6 +108,7 @@ void TogglePin(const std::string& id) {
 
 int packFilter = -1;
 int medalFilter = -1;
+int progressOrder = 0;
 int filter = 0;
 char query[160]{};
 bool lost = false;
@@ -135,6 +137,9 @@ void LoadMenu(const std::wstring& directory, bool preview) {
         medal < -1 || medal > 4 || scroll < 0 || scroll > 1000000) return;
     std::string search;
     std::getline(file, search);
+    int order = 0;
+    std::istringstream settings(search);
+    if (settings >> order && order >= 0 && order <= 2) progressOrder = order;
     std::getline(file, search);
     if (!search.empty() && search.back() == '\r') search.pop_back();
     if (search.size() >= sizeof(query)) return;
@@ -149,7 +154,7 @@ void LoadMenu(const std::wstring& directory, bool preview) {
 void SaveMenu(bool force) {
     if (menuSettings.empty() || restoreScroll) return;
     const auto value = std::to_string(filter) + " " + std::to_string(packFilter) + " " +
-        std::to_string(medalFilter) + " " + std::to_string(menuScroll) + "\n" + query;
+        std::to_string(medalFilter) + " " + std::to_string(menuScroll) + " " + std::to_string(progressOrder) + "\n" + query;
     if (value == savedMenu) return;
     const ULONGLONG now = GetTickCount64();
     if (!force && now - lastMenuWrite < 150) return;
@@ -658,6 +663,40 @@ void DrawTracker() {
         ToggleTracker();
 }
 
+std::string unlockId, unlockTitle;
+bool unlockWriteFailed = false;
+
+std::set<std::string> localUnlocks;
+
+void LoadLocalUnlocks() {
+    if (soundSettings.empty()) return;
+    const auto path = soundSettings + L".unlocks";
+    std::ifstream file(path.c_str(), std::ios::binary);
+    std::string id;
+    while (file >> id)
+        if (id.size() == 36) localUnlocks.insert(id);
+    for (auto& badge : badges)
+        if (localUnlocks.count(badge.id)) badge.status = 1;
+}
+
+bool RequestUnlock(const std::string& id) {
+    if (!liveViewer || soundSettings.empty()) return false;
+    const auto path = soundSettings + L".unlocks";
+    const auto temporary = path + L".tmp";
+    auto updated = localUnlocks;
+    updated.insert(id);
+    std::ofstream file(temporary.c_str(), std::ios::binary | std::ios::trunc);
+    for (const auto& value : updated) file << value << '\n';
+    file.close();
+    if (!file || !MoveFileExW(temporary.c_str(), path.c_str(), MOVEFILE_REPLACE_EXISTING))
+        return false;
+    localUnlocks.swap(updated);
+    for (auto& badge : badges)
+        if (badge.id == id) badge.status = 1;
+    PlayBadgeSound(false);
+    return true;
+}
+
 void Draw() {
     if (resizePending || lost) {
         if (lost && device->TestCooperativeLevel() == D3DERR_DEVICELOST) return;
@@ -747,27 +786,42 @@ void Draw() {
         completed += badge.status == 1;
         incomplete += badge.status == 0;
     }
-    ImGui::BeginChild("filters", ImVec2(205, 0), ImGuiChildFlags_Borders);
+    ImGui::BeginChild("filters", ImVec2(224, 0), ImGuiChildFlags_Borders);
+    ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(8, 6));
     ImGui::TextDisabled(Text("PROGRESSO LOCAL", "LOCAL PROGRESS"));
+    if (completed + incomplete > 0) {
+        char progress[48];
+        sprintf_s(progress, Text("%d de %d completas","%d of %d complete"), completed, completed + incomplete);
+        ImGui::TextUnformatted(progress);
+        ImGui::PushStyleColor(ImGuiCol_PlotHistogram, ImVec4(.45f,.80f,.27f,1));
+        ImGui::ProgressBar(static_cast<float>(completed) / (completed + incomplete), ImVec2(-1, 7), "");
+        ImGui::PopStyleColor();
+    }
+    if (total > completed + incomplete)
+        ImGui::TextDisabled(Text("%d sem progresso","%d without progress"), total - completed - incomplete);
+    ImGui::Spacing();
     const char* labels[] = {Text("Todas","All"), Text("Completas","Complete"), Text("Incompletas","Incomplete"), Text("Fixadas","Pinned")};
     const int counts[] = {total, completed, incomplete, fixed};
     for (int index = 0; index < 4; ++index) {
-        char label[60];
-        sprintf_s(label, "%s  (%d)", labels[index], counts[index]);
-        if (ImGui::Selectable(label, filter == index, 0, ImVec2(0, 35))) filter = index;
-    }
-    ImGui::Spacing();
-    if (completed + incomplete > 0) {
-        char progress[32];
-        sprintf_s(progress, Text("%d de %d","%d of %d"), completed, completed + incomplete);
-        ImGui::PushStyleColor(ImGuiCol_PlotHistogram, ImVec4(.45f,.80f,.27f,1));
-        ImGui::ProgressBar(static_cast<float>(completed) / (completed + incomplete), ImVec2(-1, 20), progress);
+        ImGui::PushID(index);
+        const bool selected = filter == index;
+        const float rowWidth = ImGui::GetContentRegionAvail().x;
+        ImGui::PushStyleColor(ImGuiCol_Button, selected ? ImVec4(.14f,.36f,.50f,1) : ImVec4(.06f,.17f,.27f,1));
+        if (ImGui::Button("##status", ImVec2(rowWidth, 30))) filter = index;
         ImGui::PopStyleColor();
+        const auto min = ImGui::GetItemRectMin();
+        const auto max = ImGui::GetItemRectMax();
+        const auto count = std::to_string(counts[index]);
+        auto* draw = ImGui::GetWindowDrawList();
+        const float y = min.y + (max.y - min.y - ImGui::GetFontSize()) * .5f;
+        draw->AddText(ImVec2(min.x + 10, y), IM_COL32(237,246,253,255), labels[index]);
+        draw->AddText(ImVec2(max.x - 10 - ImGui::CalcTextSize(count.c_str()).x, y),
+                      selected ? IM_COL32(200,235,253,255) : IM_COL32(143,191,220,255), count.c_str());
+        ImGui::PopID();
     }
     ImGui::Spacing();
-    if (total > completed + incomplete)
-        ImGui::TextDisabled(Text("%d sem progresso","%d without progress"), total - completed - incomplete);
-    ImGui::TextDisabled(Text("PACOTE","PACK"));
+    ImGui::SeparatorText(Text("Filtros", "Filters"));
+    ImGui::TextDisabled(Text("Pacote","Pack"));
     ImGui::SetNextItemWidth(-1);
     if (ImGui::BeginCombo("##pack", packFilter < 0 ? Text("Todos os pacotes","All packs") : PackName(packFilter))) {
         if (ImGui::Selectable(Text("Todos os pacotes","All packs"), packFilter < 0)) packFilter = -1;
@@ -780,7 +834,7 @@ void Draw() {
         ImGui::EndCombo();
     }
     ImGui::Spacing();
-    ImGui::TextDisabled(Text("RARIDADE","RARITY"));
+    ImGui::TextDisabled(Text("Raridade","Rarity"));
     ImGui::SetNextItemWidth(-1);
     const char* const rarityNames[] = {Text("Sem medalha","No medal"), "Bronze", Text("Prata","Silver"), Text("Ouro","Gold"), Text("Platina","Platinum")};
     if (ImGui::BeginCombo("##rarity", medalFilter < 0 ? Text("Todas as raridades","All rarities") : rarityNames[medalFilter])) {
@@ -791,13 +845,46 @@ void Draw() {
         if (ImGui::Selectable(rarityNames[0], medalFilter == 0)) medalFilter = 0;
         ImGui::EndCombo();
     }
+    ImGui::Spacing();
+    ImGui::TextDisabled(Text("Ordenar por", "Sort by"));
+    const char* orders[] = {Text("Nome", "Name"), Text("Maior progresso", "Highest progress"),
+                            Text("Menor progresso", "Lowest progress")};
+    bool orderChanged = false;
+    ImGui::SetNextItemWidth(-1);
+    if (ImGui::BeginCombo("##progressOrder", orders[progressOrder])) {
+        for (int order = 0; order < IM_ARRAYSIZE(orders); ++order) {
+            if (ImGui::Selectable(orders[order], progressOrder == order)) {
+                orderChanged = progressOrder != order;
+                progressOrder = order;
+                if (order != 0 && filter == 1) filter = 0;
+            }
+        }
+        ImGui::EndCombo();
+    }
+    ImGui::Spacing();
+    ImGui::SeparatorText(Text("Op\xc3\xa7\xc3\xb5" "es", "Options"));
     ImGui::BeginDisabled(std::none_of(badges.begin(), badges.end(),
         [](const Badge& badge) { return pinned.count(badge.id) != 0; }));
     if (ImGui::Button(Text("Acompanhar fixadas", "Track pinned badges"), ImVec2(-1, 33)))
         ToggleTracker();
     ImGui::EndDisabled();
-    if (ImGui::Button(Text("Som", "Sound"), ImVec2(-1, 27)))
+    if (ImGui::Button("##sound", ImVec2(36, 33)))
         ImGui::OpenPopup("badge-audio");
+    ImGui::SetItemTooltip("%s", Text("Som", "Sound"));
+    const auto soundButton = ImGui::GetItemRectMin();
+    const ImVec2 speaker(soundButton.x + 9, soundButton.y + 16);
+    const ImVec2 speakerBody[] = {
+        ImVec2(speaker.x, speaker.y - 3), ImVec2(speaker.x + 4, speaker.y - 3),
+        ImVec2(speaker.x + 9, speaker.y - 7), ImVec2(speaker.x + 9, speaker.y + 7),
+        ImVec2(speaker.x + 4, speaker.y + 3), ImVec2(speaker.x, speaker.y + 3)
+    };
+    auto* soundIcon = ImGui::GetWindowDrawList();
+    const ImU32 soundColor = ImGui::GetColorU32(ImGuiCol_Text);
+    soundIcon->AddConcavePolyFilled(speakerBody, IM_ARRAYSIZE(speakerBody), soundColor);
+    for (float radius : {5.f, 8.f}) {
+        soundIcon->PathArcTo(ImVec2(speaker.x + 10, speaker.y), radius, -.75f, .75f, 8);
+        soundIcon->PathStroke(soundColor, 0, 1.4f);
+    }
     if (ImGui::BeginPopup("badge-audio")) {
         ImGui::TextUnformatted(Text("Volume do Badge Tracker", "Badge Tracker volume"));
         ImGui::SetNextItemWidth(190);
@@ -810,23 +897,39 @@ void Draw() {
         if (ImGui::Button(Text("Ouvir curto", "Preview short"))) PlayBadgeSound(true);
         ImGui::EndPopup();
     }
+    ImGui::PopStyleVar();
     ImGui::EndChild();
     ImGui::SameLine();
     if (restoreScroll) ImGui::SetNextWindowScroll(ImVec2(-1, static_cast<float>(menuScroll)));
     ImGui::BeginChild("badgeList", ImVec2(0, 0), ImGuiChildFlags_Borders);
+    if (orderChanged) ImGui::SetScrollY(0);
     const bool initialLayout = restoreScroll;
     restoreScroll = false;
     const auto search = Fold(query);
-    int matches = 0;
+    std::vector<Badge*> visibleBadges;
     for (auto& badge : badges) {
         if (!MatchesPack(badge, packFilter)) continue;
         if (medalFilter >= 0 && badge.medal != medalFilter) continue;
         if ((filter == 1 && badge.status != 1) || (filter == 2 && badge.status != 0)) continue;
         if (filter == 3 && !pinned.count(badge.id)) continue;
         if (!search.empty() && Fold(badge.name).find(search) == std::wstring::npos) continue;
-        ++matches;
+        if (progressOrder != 0 && (badge.status != 0 || badge.progress < 0 || badge.goal <= 0)) continue;
+        visibleBadges.push_back(&badge);
+    }
+    if (progressOrder != 0) {
+        const auto fraction = [](const Badge& badge) {
+            return static_cast<double>(std::min(badge.progress, badge.goal)) / badge.goal;
+        };
+        std::stable_sort(visibleBadges.begin(), visibleBadges.end(), [&](const Badge* a, const Badge* b) {
+            const double left = fraction(*a);
+            const double right = fraction(*b);
+            return progressOrder == 1 ? left > right : left < right;
+        });
+    }
+    for (auto* entry : visibleBadges) {
+        auto& badge = *entry;
         ImGui::PushID(badge.id.c_str());
-        const char* status = badge.status == 1 ? Text("Completa","Complete") :
+        const char* status = badge.status == 1 ? (localUnlocks.count(badge.id) ? Text("Completa no app","Complete in app") : Text("Completa","Complete")) :
                              badge.status == 0 ? Text("Incompleta","Incomplete") : Text("Progresso indispon\xc3\xadvel","Progress unavailable");
         const ImVec4 statusColor = badge.status == 1 ? ImVec4(.68f,.91f,.79f,1)
                                                     : ImVec4(.90f,.87f,.92f,1);
@@ -835,10 +938,14 @@ void Draw() {
         const ImVec2 top = ImGui::GetCursorScreenPos();
         const char* description = badge.description.empty()
             ? "Sem descri\xc3\xa7\xc3\xa3o dispon\xc3\xadvel." : badge.description.c_str();
-        const float descriptionWidth = width - 104;
+        const float descriptionWidth = width - 132;
         const float descriptionHeight = ImGui::CalcTextSize(
             description, nullptr, false, descriptionWidth).y;
-        const float height = 83 + descriptionHeight + (badge.progress >= 0 ? 35 : 0);
+        const bool canUnlock = (liveViewer || !toastMode) && badge.status == 0;
+        const float titleWidth = width - 172;
+        const float titleHeight = ImGui::CalcTextSize(badge.name.c_str(), nullptr, false, titleWidth).y;
+        const float descriptionY = std::max(62.0f, 46 + titleHeight);
+        const float height = descriptionY + descriptionHeight + (badge.progress >= 0 ? 34 : 0) + 54;
         const ImVec2 bottom(top.x + width, top.y + height);
         ImGui::Dummy(ImVec2(width, height));
         if (ImGui::IsItemVisible()) {
@@ -846,45 +953,54 @@ void Draw() {
             const ImVec4 background(tint.x, tint.y, tint.z, 1);
             draw->AddRectFilled(top, bottom, ImGui::GetColorU32(background), 16);
             draw->AddRect(top, bottom, IM_COL32(255,255,255,35), 16);
-            draw->AddRectFilled(ImVec2(top.x + 3, top.y + 18),
-                                ImVec2(top.x + 6, bottom.y - 18),
-                                IM_COL32(255,255,255,79), 2);
+            if (badge.medal >= 3) {
+                const bool platinum = badge.medal == 4;
+                for (int inset = 0; inset < 5; ++inset) {
+                    const float offset = static_cast<float>(inset);
+                    const int alpha = (platinum ? 92 : 62) / (inset + 1);
+                    const ImU32 glow = platinum ? IM_COL32(185,230,255,alpha)
+                                                 : IM_COL32(255,211,128,alpha);
+                    draw->AddRect(ImVec2(top.x + offset, top.y + offset),
+                                  ImVec2(bottom.x - offset, bottom.y - offset),
+                                  glow, 16 - offset);
+                }
+            }
 
-            const ImVec2 iconMin(top.x + 10, top.y + 9);
-            const ImVec2 iconMax(iconMin.x + 64, iconMin.y + 64);
-            draw->AddRectFilled(iconMin, iconMax, IM_COL32(13,14,18,170), 9);
+            const ImVec2 iconMin(top.x + 12, top.y + 12);
+            const ImVec2 iconMax(iconMin.x + 92, iconMin.y + 92);
             LoadBadgeTexture(badge);
             if (badge.icon) {
                 const auto image = static_cast<ImTextureID>(reinterpret_cast<uintptr_t>(badge.icon.Get()));
-                draw->AddImage(image, ImVec2(iconMin.x + 4, iconMin.y + 4),
-                               ImVec2(iconMax.x - 4, iconMax.y - 4));
+                draw->AddImage(image, iconMin, iconMax);
             } else {
-                draw->AddCircle(ImVec2(iconMin.x + 32, iconMin.y + 32), 13,
+                draw->AddCircle(ImVec2(iconMin.x + 46, iconMin.y + 46), 13,
                                 IM_COL32(255,255,255,85), 24, 2);
             }
 
             const float statusWidth = ImGui::CalcTextSize(status).x + 18;
-            const float statusX = bottom.x - statusWidth - 86;
-            const ImVec2 textStart(top.x + 88, top.y + 19);
-            draw->PushClipRect(textStart, ImVec2(statusX - 10, bottom.y), true);
-            draw->AddText(textStart, IM_COL32(255,255,255,255), badge.name.c_str());
+            const float statusX = top.x + 116;
+            const float footerY = bottom.y - 35;
+            const ImVec2 textStart(top.x + 116, top.y + 19);
+            draw->AddText(ImGui::GetFont(), ImGui::GetFontSize(), textStart,
+                          IM_COL32(255,255,255,255), badge.name.c_str(), nullptr, titleWidth);
+            draw->PushClipRect(textStart, ImVec2(bottom.x - 54, bottom.y), true);
             std::string subtitle = PackName(badge.packs.front());
             if (badge.medal) subtitle = std::string(rarityNames[badge.medal]) + "  /  " + subtitle;
-            draw->AddText(ImVec2(textStart.x, top.y + 46), IM_COL32(240,235,247,225), subtitle.c_str());
+            draw->AddText(ImVec2(textStart.x, textStart.y + titleHeight + 4), IM_COL32(240,235,247,225), subtitle.c_str());
             draw->PopClipRect();
 
-            draw->AddRectFilled(ImVec2(statusX, top.y + 27), ImVec2(statusX + statusWidth, top.y + 53),
+            draw->AddRectFilled(ImVec2(statusX, footerY), ImVec2(statusX + statusWidth, footerY + 24),
                                 IM_COL32(13,14,18,145), 13);
-            draw->AddText(ImVec2(statusX + 9, top.y + 31), ImGui::GetColorU32(statusColor), status);
+            draw->AddText(ImVec2(statusX + 9, footerY + 3), ImGui::GetColorU32(statusColor), status);
             draw->AddText(ImGui::GetFont(), ImGui::GetFontSize(),
-                          ImVec2(textStart.x, top.y + 69), IM_COL32(250,247,252,240),
+                          ImVec2(textStart.x, top.y + descriptionY), IM_COL32(250,247,252,240),
                           description, nullptr, descriptionWidth);
             if (badge.progress >= 0) {
                 const int remaining = std::max(0, badge.goal - badge.progress);
                 const auto progress = (badge.milestoneSim.empty() ? std::string() :
                     badge.milestoneSim + "  |  ") + std::to_string(badge.progress) + " / " + std::to_string(badge.goal) +
                     (badge.children ? Text(" filhos"," children") : "") + Text("  |  Faltam ","  |  Remaining ") + std::to_string(remaining);
-                const float y = top.y + 74 + descriptionHeight;
+                const float y = top.y + descriptionY + descriptionHeight + 5;
                 draw->PushClipRect(ImVec2(textStart.x, y), ImVec2(bottom.x - 12, bottom.y), true);
                 draw->AddText(ImVec2(textStart.x, y), IM_COL32(248,228,168,255), progress.c_str());
                 draw->PopClipRect();
@@ -898,17 +1014,39 @@ void Draw() {
             }
 
             const ImVec2 after = ImGui::GetCursorScreenPos();
-            ImGui::SetCursorScreenPos(ImVec2(bottom.x - 77, top.y + 24));
-            ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(5, 5));
-            if (ImGui::Button(pinned.count(badge.id) ? Text("Fixada","Pinned") : Text("Fixar","Pin"), ImVec2(64, 32)))
-                TogglePin(badge.id);
-            ImGui::PopStyleVar();
+            const bool isPinned = pinned.count(badge.id) != 0;
+            ImGui::SetCursorScreenPos(ImVec2(bottom.x - 46, top.y + 12));
+            if (isPinned) ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(.12f,.36f,.36f,1));
+            if (ImGui::Button("##pin", ImVec2(32, 32))) TogglePin(badge.id);
+            if (isPinned) ImGui::PopStyleColor();
+            ImGui::SetItemTooltip("%s", isPinned ? Text("Desafixar conquista", "Unpin badge")
+                                                 : Text("Fixar conquista", "Pin badge"));
+            const ImVec2 pin = ImGui::GetItemRectMin();
+            const ImU32 pinColor = isPinned ? IM_COL32(177,245,152,255) : IM_COL32(235,243,250,255);
+            draw->AddRectFilled(ImVec2(pin.x + 11, pin.y + 8), ImVec2(pin.x + 21, pin.y + 10), pinColor, 1);
+            draw->AddRectFilled(ImVec2(pin.x + 13, pin.y + 10), ImVec2(pin.x + 19, pin.y + 16), pinColor);
+            draw->AddTriangleFilled(ImVec2(pin.x + 13, pin.y + 14), ImVec2(pin.x + 19, pin.y + 14),
+                                    ImVec2(pin.x + 22, pin.y + 19), pinColor);
+            draw->AddTriangleFilled(ImVec2(pin.x + 13, pin.y + 14), ImVec2(pin.x + 22, pin.y + 19),
+                                    ImVec2(pin.x + 10, pin.y + 19), pinColor);
+            draw->AddLine(ImVec2(pin.x + 16, pin.y + 19), ImVec2(pin.x + 16, pin.y + 25), pinColor, 1.5f);
+            if (canUnlock) {
+                const char* action = Text("Desbloqueio manual", "Manual unlock");
+                const float actionWidth = ImGui::CalcTextSize(action).x + 24;
+                const float actionHeight = ImGui::GetFrameHeight();
+                ImGui::SetCursorScreenPos(ImVec2(bottom.x - actionWidth - 12, footerY + (24 - actionHeight) * .5f));
+                if (ImGui::Button(action, ImVec2(actionWidth, actionHeight))) {
+                    unlockId = badge.id;
+                    unlockTitle = badge.name;
+                    unlockWriteFailed = false;
+                }
+            }
             ImGui::SetCursorScreenPos(after);
             ImGui::Dummy(ImVec2(0, 0));
         }
         ImGui::PopID();
     }
-    if (!matches) {
+    if (visibleBadges.empty()) {
         const char* empty = badges.empty() ? "Sem conquistas carregadas nesta sessao." :
             filter == 3 && pinned.empty() ? Text("Use Fixar para guardar uma conquista aqui.","Use Pin to save a badge here.") :
             Text("Nenhum resultado.","No results.");
@@ -922,6 +1060,36 @@ void Draw() {
         SaveMenu(false);
     }
     ImGui::EndChild();
+    }
+    if (!unlockId.empty() && !ImGui::IsPopupOpen("##manual-unlock"))
+        ImGui::OpenPopup("##manual-unlock");
+    if (ImGui::BeginPopupModal("##manual-unlock", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::TextUnformatted(Text("Desbloqueio manual", "Manual unlock"));
+        ImGui::Separator();
+        ImGui::PushTextWrapPos(ImGui::GetCursorPosX() + 390);
+        ImGui::TextUnformatted(unlockTitle.c_str());
+        ImGui::TextUnformatted(Text(
+            "Use esta op\xc3\xa7\xc3\xa3o quando voc\xc3\xaa cumprir os requisitos e o jogo n\xc3\xa3o registrar a conquista. A conclus\xc3\xa3o fica salva apenas no Badge Tracker. Sua conta EA e o progresso oficial do jogo ficam intactos.",
+            "Use this if you met the requirements but the game did not register the achievement. Completion is saved only in Badge Tracker. Your EA account and official game progress are unaffected."));
+        if (!liveViewer)
+            ImGui::TextDisabled("%s", Text("Apenas pr\xc3\xa9via. Abra o painel no jogo para desbloquear.", "Preview only. Open the panel in-game to unlock."));
+        if (unlockWriteFailed)
+            ImGui::TextUnformatted(Text("N\xc3\xa3o foi poss\xc3\xadvel enviar o pedido.", "Could not send the request."));
+        ImGui::PopTextWrapPos();
+        ImGui::BeginDisabled(!liveViewer);
+        if (ImGui::Button(Text("Confirmar desbloqueio", "Confirm unlock"))) {
+            if (RequestUnlock(unlockId)) {
+                unlockId.clear();
+                ImGui::CloseCurrentPopup();
+            } else unlockWriteFailed = true;
+        }
+        ImGui::EndDisabled();
+        ImGui::SameLine();
+        if (ImGui::Button(Text("Cancelar", "Cancel"))) {
+            unlockId.clear();
+            ImGui::CloseCurrentPopup();
+        }
+        ImGui::EndPopup();
     }
     ImGui::End();
     ImGui::Render();
@@ -1039,6 +1207,7 @@ int main(int argc, char** argv) {
             iconFolder += L"Ts3Emblemas\\";
         }
     }
+    if (liveViewer) LoadLocalUnlocks();
     ShowWindow(window, toastMode ? SW_SHOWNOACTIVATE : SW_SHOW);
     if (toastMode) PlayBadgeSound(false);
     else SetForegroundWindow(window);

@@ -1,5 +1,6 @@
 #pragma once
 #include <windows.h>
+#include <string>
 void __cdecl BeginBadges();
 void __cdecl BadgeUnit(int unit);
 void __cdecl EndBadge(int status);

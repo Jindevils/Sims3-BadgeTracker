@@ -6,7 +6,7 @@ Badge Tracker adds an achievement panel to The Sims 3 Steam 1.67 on Windows. Loa
 
 ## Download and installation
 
-[Download BadgeTracker-Teste.zip](https://github.com/Jindevils/Sims3-BadgeTracker/releases/download/v0.1.0-test/BadgeTracker-Teste.zip)
+[Download Badge Tracker v0.2.0](https://github.com/Jindevils/Sims3-BadgeTracker/releases/tag/v0.2.0)
 
 1. Close the game and extract the ZIP.
 2. Copy BadgeTracker.asi to The Sims 3's Game/Bin folder, next to TS3W.exe. A 32-bit ASI loader is required.
@@ -14,6 +14,16 @@ Badge Tracker adds an achievement panel to The Sims 3 Steam 1.67 on Windows. Loa
 4. Load a household and press Ctrl + Shift + B.
 
 The ZIP includes English and Brazilian Portuguese installation guides.
+
+## What’s new in v0.2.0
+
+- Added Manual Unlock for incomplete achievements that fail to unlock after you meet their requirements. The unlock is saved locally in Badge Tracker. You can stay signed into EA, and your EA account and online achievements are unaffected.
+- Added Highest Progress and Lowest Progress sorting. Both views show incomplete achievements with a progress bar and compare the percentage of each goal. Name sorting restores the regular list.
+- Reorganized the sidebar and achievement cards. Badges are larger, Gold and Platinum cards have a rarity glow, and pinning and sound controls now use icons.
+
+**Updating from v0.1.0:** Close the game and replace the old ASI in `Game/Bin` with `BadgeTracker.asi`. Keep your existing package and remove any renamed copy of the old ASI.
+
+[Full changelog](CHANGELOG.md)
 
 ## Features
 
